@@ -1,0 +1,23 @@
+.took-email {
+    // padding: 250px 0 240px;
+    padding: clamp(3.75rem, 0.357rem + 16.96vw, 15.625rem) 0 clamp(5rem, 2.143rem + 14.29vw, 15rem);
+    &__text {
+        max-width: 427px;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+        margin: 25px auto 0 auto;
+    }
+    &__form {
+        margin: clamp(3.125rem, -0.781rem + 19.53vw, 6.25rem) auto 0 auto;
+        @include phone {
+            position: relative;
+            .took-email__button {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 60px;
+            }
+        }
+    }
+}

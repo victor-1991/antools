@@ -1,0 +1,25 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    max-width: 1254px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.none {
+    display: none !important;
+}

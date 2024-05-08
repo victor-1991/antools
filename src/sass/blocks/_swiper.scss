@@ -1,0 +1,54 @@
+.swiper-button-prev, .swiper-button-next {
+    width: 80px;
+    height: 100px;
+    border-radius: 8px;
+    &:hover {
+        background: rgba(40, 48, 54, 0.20);
+        backdrop-filter: blur(25px);
+        border: 1px solid var(--button-border-color);
+    }
+    @include phoneXL {
+        display: none;
+    }
+}
+.swiper-button-prev {
+    &::after {
+        content: "";
+        width: 48px;
+        height: 48px;
+        background: url("../../icons/team/chevron-left.svg") center center/cover no-repeat;
+    }
+}
+
+.swiper-button-next {
+    &::after {
+        content: "";
+        width: 48px;
+        height: 48px;
+        background: url("../../icons/team/chevron-right.svg") center center/cover no-repeat;
+    }
+}
+
+.swiper-button-next:hover::after {
+    background: url("../../icons/team/chevron-right-act.svg") center center/cover no-repeat;
+}
+
+.swiper-button-prev:hover::after {
+    background: url("../../icons/team/chevron-left-act.svg") center center/cover no-repeat;
+}
+
+.swiper-pagination-bullet {
+    width: 44px;
+    height: 6px;
+    border-radius: 4px;
+    background: #5e6c77;
+    margin: 0 18px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent-color);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 0;
+}

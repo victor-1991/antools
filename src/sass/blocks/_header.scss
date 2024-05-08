@@ -1,0 +1,82 @@
+.header {
+    padding-top: 74px;
+    // min-height: 700px;
+    min-height: clamp(34.375rem, 30.966rem + 17.05vw, 43.75rem);
+    &__content {
+        margin-top: clamp(0rem, -6.468rem + 13.46vw, 3.625rem);
+        // padding-top: 46px;
+        padding-top: clamp(0.625rem, -0.979rem + 8.02vw, 2.875rem);
+        position: relative;
+    }
+    &__title {
+        max-width: 600px;
+        @include tablet {
+            text-align: center;
+            margin: 0 auto !important;
+        }
+    }
+    &__text {
+        max-width: 487px;
+        // margin: 30px 0 0 0;
+        margin: clamp(0.938rem, 0.269rem + 3.34vw, 1.875rem) 0 0 0 ;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        @include tablet {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__form {
+        // margin-top: 60px;
+        margin-top: clamp(1.875rem, 0.539rem + 6.68vw, 3.75rem);
+        @include tablet {
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          .button {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+    }
+    &__social {
+        // margin-top: 121px;
+        margin-top: clamp(6.25rem, 5.315rem + 4.68vw, 7.563rem);
+        padding: 11px 11px 11px 12px;
+        display: inline-flex;
+        &-link {
+            transition: transform .3s ease;
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+        &-link+&-link {
+            margin-left: 30px;
+        }
+        @include tablet {
+            display: flex;
+            justify-content: center;
+          }
+    }
+    &__img {
+        // max-width: 589px;
+        max-width: clamp(25rem, -1.241rem + 42.28vw, 36.813rem);
+        // max-height: 892px;
+        aspect-ratio: 589/892;
+        position: absolute;
+        // right: -105px;
+        right: calc((85px + clamp(-6.563rem, -39.375rem + 43.75vw, 0rem)) * (-1));
+        top: 0;
+        z-index: -1;
+        @include phone {
+            right: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: clamp(18.125rem, 9.531rem + 42.97vw, 25rem);
+        }
+    }
+}

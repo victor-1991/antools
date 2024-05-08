@@ -1,0 +1,113 @@
+.nav {
+    width: 100%;
+    position: fixed;
+    padding-top: clamp(0.625rem, -0.264rem + 2.47vw, 1.625rem);;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var( --main-bg-color);
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+    &__logo {
+        width: 140px;
+        height: 38px;
+        object-fit: cover;
+        &-link {
+            @include tablet {
+                margin-left: 50px;
+            }
+        }
+    }
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-left: clamp(5rem, -42.302rem + 76.29vw, 16.063rem);
+        display: flex;
+        gap: 42px;
+        @include tablet{
+            display: none;
+        }
+    }
+    &__link-arrow {
+        stroke: var(--main-text-color);
+        transition: all .3s ease;
+    }
+    &__submenu {
+        &-wrapper {
+            padding-top: 15px;
+            pointer-events: none;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        width: max-content;
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 10px 5px 15px;
+        border-radius: 8px;
+        outline: 1px solid var(--card-outline-color);
+        background: var(--card--bg-color);
+        backdrop-filter: blur(25px);
+        
+        &-item {
+            padding: 5px 0;
+        }
+        &-link {
+            font-size: 14px;
+            transition: all .3s ease;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+    &__item {
+        transition: color .3s;
+        &:hover {
+            color: var(--accent-color);
+            & .nav__submenu-wrapper {
+                opacity: 1;
+                pointer-events: auto;
+                top: 20px;
+            }
+            .nav__link-arrow {
+                stroke: var(--accent-color);
+                transform: rotateX(180deg);
+            }
+        }
+        &-drop {
+            position: relative;
+        }
+    }
+    
+    &__link {
+        &--fw600 {
+            font-weight: 600;
+            color: var(--medium-text-color);
+            transition: all .3s ease;
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+    &__register {
+        display: inline-flex;
+        align-items: center;
+        gap: 41px;
+        margin-left: auto;
+        @include tablet {
+            margin-left: unset;
+        }
+        @include phoneXL {
+            display: none;
+        }
+    }
+    
+}

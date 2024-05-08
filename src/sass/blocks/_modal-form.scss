@@ -1,0 +1,27 @@
+.modal-form {
+    margin-top: 32px;
+    label {
+        display: block;
+    }
+    label+label {
+        margin-top: 40px;
+    }
+    &__label {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__input {
+        margin-top: 8px;
+        width: 100%;
+        height: 40px;
+
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        padding-left: 24px;
+        background-color: var(--form-bg-color);
+        &::placeholder {
+            color: var(--placeholder-text-color);
+        }
+    }
+}

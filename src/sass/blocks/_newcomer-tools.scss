@@ -1,0 +1,56 @@
+.newcomer-tools {
+    // padding-top: 220px;
+    padding-top: clamp(3.125rem, -0.636rem + 18.81vw, 13.75rem);
+    // padding-bottom: 200px;
+    padding-bottom: clamp(3.125rem, -0.194rem + 16.59vw, 12.5rem);
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        column-gap: 24px;
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+
+    }
+    &__info {
+        padding-bottom: 30px;
+    }
+    &__title {
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__descr {
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 30px;
+        @include tablet {
+            text-align: center;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__button {
+        margin-top: 60px;
+        @include tablet {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__tools {
+        display: grid;
+        grid-template-columns: repeat(2, 288px);
+        grid-template-columns: repeat(2, minmax(284px, auto));
+        gap: 50px 24px;
+        @include tabletXL {
+            grid-template-columns: repeat(2,  auto);
+        }
+        @include phone {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+}

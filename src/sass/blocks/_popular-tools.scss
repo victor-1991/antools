@@ -1,0 +1,40 @@
+.popular-tools {
+    // padding-top: 200px;
+    padding-top: clamp(2.5rem, -1.001rem + 17.51vw, 12.5rem);
+    // padding-bottom: 200px;
+    padding-bottom: clamp(3.125rem, -0.157rem + 16.41vw, 12.5rem);
+    &__descr {
+        max-width: 427px;
+        // margin: 25px auto 0 auto;
+        margin: clamp(0.938rem, 0.719rem + 1.09vw, 1.563rem) auto 0 auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &__wrapper {
+        // margin-top: 110px;
+        margin-top: clamp(3.125rem, 1.812rem + 6.56vw, 6.875rem);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, minmax(294px, auto));
+        grid-auto-rows: minmax(294px, auto);
+        // gap: 100px clamp(1.25rem, -0.038rem + 2.07vw, 1.563rem);
+        // gap: clamp(4.375rem, -3.351rem + 12.45vw, 6.25rem) clamp(1.25rem, -0.038rem + 2.07vw, 1.563rem);
+        gap: clamp(2.5rem, 1.187rem + 6.56vw, 6.25rem) clamp(1.25rem, -0.038rem + 2.07vw, 1.563rem);
+       
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include phoneXL {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            grid-template-rows: auto;
+            grid-auto-rows: auto;
+        }
+    }
+    &__button {
+        // margin: 100px auto 0 auto;
+        margin: clamp(3.125rem, 2.031rem + 5.47vw, 6.25rem) auto 0 auto;
+    }
+}
